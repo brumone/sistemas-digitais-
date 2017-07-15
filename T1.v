@@ -1,6 +1,6 @@
 module pisca (
 
-    input clk_50,
+    input CLOCK_50,
     output [1:0]LEDG
 );
 
@@ -12,7 +12,7 @@ module pisca (
 
     // LED pisca sem ser visível devido ao clock
 
-    always @ (posedge clk_50) begin
+    always @ (posedge CLOCK_50) begin
 
     if (count == 50000000) begin
                 state = ~state;
